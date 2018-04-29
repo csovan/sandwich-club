@@ -3,6 +3,7 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -42,7 +43,8 @@ public class DetailActivity extends AppCompatActivity {
             closeOnError();
             return;
         }
-
+        Log.d("imageURL", sandwich.getImage());
+        Log.d("description", sandwich.getDescription());
         populateUI();
         Picasso.with(this)
                 .load(sandwich.getImage())
