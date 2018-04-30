@@ -69,6 +69,6 @@ public class DetailActivity extends AppCompatActivity {
         alsoKnownAsTv.setText(TextUtils.join(", ", sandwich.getAlsoKnownAs()));
         placeOfOriginTv.setText(sandwich.getPlaceOfOrigin());
         descriptionTv.setText(sandwich.getDescription());
-        ingredientsTv.setText(TextUtils.join(", ", sandwich.getIngredients()));
+        ingredientsTv.setText(TextUtils.join("\n", sandwich.getIngredients()));
     }
 }
