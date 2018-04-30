@@ -1,5 +1,7 @@
 package com.udacity.sandwichclub.utils;
 
+import android.util.Log;
+
 import com.udacity.sandwichclub.model.Sandwich;
 
 import org.json.JSONArray;
@@ -12,16 +14,18 @@ import java.util.List;
 public class JsonUtils {
 
     public static Sandwich parseSandwichJson(String json) {
+        /*JSON data is provided as a string-array in strings.xml file in res/values dir*/
 
         try
         {
-            /*Get the JSONObject representing sandwich details data*/
-            JSONObject sandwichDetailsData = new JSONObject(json);
+            /*Create a JSONObject from the json string parameter*/
+            JSONObject sandwichDetailsJson = new JSONObject(json);
 
             /*Extract sandwich details json data from strings.xml*/
+
             /*Get JSONObject called name*/
-            JSONObject nameObject = sandwichDetailsData.getJSONObject("name");
-            /*Get Key mainName*/
+            JSONObject nameObject = sandwichDetailsJson.getJSONObject("name");
+            /*Get Key String called mainName*/
             String mainName = nameObject.getString("mainName");
             /*Get JSONArray called alsoKnownAs*/
             JSONArray akaArray = nameObject.getJSONArray("alsoKnownAs");
@@ -30,21 +34,25 @@ public class JsonUtils {
             for (int i = 0; i<akaArray.length(); i++){
                 akaList.add(akaArray.getString(i));
             }
-            String placeOfOrigin = sandwichDetailsData.getString("placeOfOrigin");
-            String description = sandwichDetailsData.getString("description");
-            String imageURL = sandwichDetailsData.getString("image");
-            JSONArray ingredientsArray = sandwichDetailsData.getJSONArray("ingredients");
-            List<String> ingredientsList = new ArrayList<>();
-            for (int i = 0; i<ingredientsArray.length(); i++){
-                ingredientsList.add(ingredientsArray.getString(i));
+            /*Get Key String called placeOfOrigin*/
+            String placeOfOrigin = sandwichDetailsJson.getString("placeOfOrigin");
+            /*Get Key String called description*/
+            String description = sandwichDetailsJson.getString("description");
+            /*Get Key String called image*/
+            String imageURL = sandwichDetailsJson.getString("image");
+            /*Get JSONArray called ingredients*/
+            JSONArray ingredientArray = sandwichDetailsJson.getJSONArray("ingredients");
+            List<String> ingredientList = new ArrayList<>();
+            /*Use a loop to loop through ingredientArray items*/
+            for (int i = 0; i<ingredientArray.length(); i++){
+                ingredientList.add(ingredientArray.getString(i));
             }
-            Sandwich sandwichObject = new Sandwich(mainName,akaList,placeOfOrigin,description,imageURL,ingredientsList);
-            return sandwichObject;
+            /*Return new Sandwich object*/
+            return new Sandwich(mainName,akaList,placeOfOrigin,description,imageURL,ingredientList);
         }
         catch (JSONException e)
         {
             e.printStackTrace();
-
         }
         return null;
     }
