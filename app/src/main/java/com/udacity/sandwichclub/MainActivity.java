@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
@@ -20,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        setupToolbar();
 
         RecyclerView recyclerViewSandwich = findViewById(R.id.recycler_view_sandwich_list);
 
@@ -49,15 +46,6 @@ public class MainActivity extends AppCompatActivity {
             Sandwich sandwich;
             sandwich = JsonUtils.parseSandwichJson(sandwichString);
             sandwichList.add(sandwich);
-        }
-    }
-
-    // Set toolbar
-    private void setupToolbar() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null){
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
     }
 }

@@ -6,6 +6,7 @@
     <string name="detail_place_of_origin_label">Place of Origin:</string>
     <string name="detail_description_label">Description:</string>
     <string name="detail_ingredients_label">Ingredients:</string>
+    <string name="detail_name">Sandwich Name</string>
 
     <!-- Content descriptions-->
     <string name="sandwich_picture_content_description">Sandwich picture</string>
@@ -16,7 +17,6 @@
     <string name="image_view_sandwich_desc">Sandwich Picture</string>
     <string name="sandwich_name">Sandwich Name</string>
     <string name="sandwich_description">This sandwich is from…</string>
-    <string name="image_view_chevron_right_desc">Chevron Right</string>
 
     <string-array name="sandwich_names">
         <item>Ham and cheese sandwich</item>
