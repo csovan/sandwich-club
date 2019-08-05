@@ -4,12 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
 
@@ -30,6 +29,7 @@ public class DetailActivity extends AppCompatActivity {
             closeOnError();
         }
 
+        assert intent != null;
         int position = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
         if (position == DEFAULT_POSITION) {
             // EXTRA_POSITION not found in intent
@@ -47,7 +47,7 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         populateUI(sandwich);
-        Picasso.with(this)
+        Glide.with(this)
                 .load(sandwich.getImage())
                 .into(ingredientsIv);
 

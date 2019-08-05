@@ -12,6 +12,11 @@
 
     <!-- Error messages-->
     <string name="detail_error_message">Sandwich data not available</string>
+    <!-- Main Activity -->
+    <string name="image_view_sandwich_desc">Sandwich Picture</string>
+    <string name="sandwich_name">Sandwich Name</string>
+    <string name="sandwich_description">This sandwich is from…</string>
+    <string name="image_view_chevron_right_desc">Chevron Right</string>
 
     <string-array name="sandwich_names">
         <item>Ham and cheese sandwich</item>
