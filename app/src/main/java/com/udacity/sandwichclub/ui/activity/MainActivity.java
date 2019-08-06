@@ -1,11 +1,13 @@
-package com.udacity.sandwichclub;
+package com.udacity.sandwichclub.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.udacity.sandwichclub.R;
 import com.udacity.sandwichclub.model.Sandwich;
+import com.udacity.sandwichclub.ui.adapter.SandwichAdapter;
 import com.udacity.sandwichclub.utils.JsonUtils;
 
 import java.util.ArrayList;

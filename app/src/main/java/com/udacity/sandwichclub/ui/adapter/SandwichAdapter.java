@@ -1,4 +1,4 @@
-package com.udacity.sandwichclub;
+package com.udacity.sandwichclub.ui.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,20 +12,22 @@ import android.widget.TextView;
 
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.udacity.sandwichclub.R;
+import com.udacity.sandwichclub.ui.activity.DetailActivity;
 import com.udacity.sandwichclub.utils.GlideApp;
 
 import com.udacity.sandwichclub.model.Sandwich;
 
 import java.util.List;
 
-import static com.udacity.sandwichclub.DetailActivity.EXTRA_POSITION;
+import static com.udacity.sandwichclub.ui.activity.DetailActivity.EXTRA_POSITION;
 
 public class SandwichAdapter extends RecyclerView.Adapter<SandwichAdapter.SandwichViewHolder> {
 
     private Context context;
     private List<Sandwich> sandwichList;
 
-    SandwichAdapter(Context context, List<Sandwich> sandwichList) {
+    public SandwichAdapter(Context context, List<Sandwich> sandwichList) {
         this.context = context;
         this.sandwichList = sandwichList;
     }
