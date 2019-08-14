@@ -6,6 +6,7 @@ show the details of each sandwich once it is selected.
 
 # Screenshots
 <img src="https://raw.githubusercontent.com/csovan/sandwich-club/master/screenshots/MainActivity.png" width="300">
+<img src="https://raw.githubusercontent.com/csovan/sandwich-club/master/screenshots/DetailsActivity.png" width="300">
 
 ## Why this Project
 
