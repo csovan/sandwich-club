@@ -1,11 +1,11 @@
 # Sandwich Club Project Starter Code
 
-# Screenshots
-![alt text](https://raw.githubusercontent.com/csovan/sandwich-club/master/screenshots/MainActivity.png)
-
 ## Project Overview
 In this project, you will complete the **Sandwich Club** app to
 show the details of each sandwich once it is selected.
+
+# Screenshots
+![alt text](https://raw.githubusercontent.com/csovan/sandwich-club/master/screenshots/MainActivity.png | width = 100)
 
 ## Why this Project
 
