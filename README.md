@@ -5,6 +5,7 @@ In this project, you will complete the **Sandwich Club** app to
 show the details of each sandwich once it is selected.
 
 # Screenshots
+<img src="https://raw.githubusercontent.com/csovan/sandwich-club/master/screenshots/MainActivity.png" width="100" height="100">
 (https://raw.githubusercontent.com/csovan/sandwich-club/master/screenshots/MainActivity.png=250x250)
 
 ## Why this Project
